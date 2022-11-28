@@ -1,18 +1,24 @@
 import { useState } from 'react';
 import './App.css';
+import Aside from './components/Aside';
 
 import SignIn from './pages/SignIn';
 
 const App = () => {
 
-  const [ logged, setLogged ] = useState(false);
+  const [ logged, setLogged ] = useState(true);
 
   return (
     <div className="App">
       {
         (logged) ?
         (
-          <h1></h1>
+          <>
+            <Aside />
+            <main className='main'>
+              main
+            </main>
+          </>
         ) :
         (
           <SignIn />

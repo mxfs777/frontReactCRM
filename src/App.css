@@ -1,7 +1,10 @@
 body {
   background-color: rgb(245, 250, 255);
-  padding: 1em;
   font-family: 'Roboto', sans-serif;
   width: 100%;
   overflow: hidden;
+}
+
+.main {
+  width: 80%;
 }

@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
-import "./Aside.css";
+import authContext from "../../context/AuthContext";
+import "./Aside.scss";
 
 const Aside = () => {
+
     return ( 
         <aside className='aside'>
             <div className="avatarContainer">
                 <div>
-                    <img className="avatar" src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png" alt="avatar"  />
+                    <img src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png" alt="avatar"  />
                     <h3>Name</h3>
                 </div>
             </div>

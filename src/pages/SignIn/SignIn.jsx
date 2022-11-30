@@ -1,6 +1,6 @@
 import { useState, createContext, useContext } from 'react';
-import authContext from '../context/AuthContext';
-import * as UserService from '../services/UserService';
+import authContext from '../../context/AuthContext';
+import * as UserService from '../../services/UserService';
 
 import './SignIn.css';
 

@@ -1,0 +1,101 @@
+.content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+
+    .newContactButton {
+        width: 150px;
+        height: 50px;
+        border: 0;
+        cursor: pointer;
+        background: rgb(252, 185, 62);
+        border-radius: 0.25rem;
+        color: white;
+    }
+}
+
+.itemsContainer {
+    width: 500px;
+    height: 100%;
+    overflow-y:scroll;
+    
+    ul {
+        list-style: none;
+        padding: 1em;
+        margin: 0;
+
+        li {
+            background: white;
+            width: 100%;
+            height: 120px;
+            box-sizing: border-box;    
+            margin-bottom: 0.8em;
+            border-radius: 0.25rem;
+            box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+
+
+            button {
+                width: 10%;
+                height: 100%;
+                float: left;
+                border: 0;
+                cursor: pointer;
+            }
+
+            button:nth-child(1) {
+                background: rgb(251, 80, 46);
+            }
+
+            button:nth-child(1):hover {
+                background: rgb(250, 70, 34);
+            }
+
+            button:nth-child(3) {
+                background: rgb(33, 234, 120);
+            }
+
+            button:nth-child(3):hover {
+                background: rgb(22, 228, 111);
+            }
+
+            .info {
+                width: 80%;
+                height: 100%;
+                float: left;
+                padding: 1em;
+                box-sizing: border-box; 
+                font-family: 'Segoe UI';
+                font-size: 16px;
+                
+                table {
+                    width: 100%;
+                    height: 100%;
+
+                    th { 
+                        font-weight: lighter;
+                        color: rgba(33, 33, 33, 0.501);                        
+                    }
+
+                    td {                        
+                        font-weight: 400;
+                    }
+
+                    .rejected {
+                        color: rgb(251, 80, 46);
+                    }
+
+                    .accepted {
+                        color: rgb(33, 234, 120);
+                    }
+
+                    .pending {
+                        color: rgb(255, 166, 0);
+                    }
+                }
+            }
+        }
+    }
+}

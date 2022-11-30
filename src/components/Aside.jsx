@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Aside.css";
 
 const Aside = () => {
@@ -11,29 +12,36 @@ const Aside = () => {
             </div>
             <ul className="menuItemsContainer">
                 <li>
-                    <div>
-                        <i class="fa-regular fa-user fa-2xl"></i>
-                        <p>Profile</p>
-                    </div>
-                </li>
-                {/* <li>Admin Dashboard</li> */}
-                <li>
-                    <div>
-                        <i class="fa-regular fa-address-book  fa-2xl"></i>
-                        <p>Contacts</p>
-                    </div>
+                    <Link to="/profile">
+                        <div>
+                            <i className="fa-regular fa-user fa-2xl"></i>
+                            <p>Profile</p>
+                        </div>
+                    </Link>
                 </li>
                 <li>
-                    <div>
-                        <i class="fa-regular fa-lightbulb fa-2xl"></i>
-                        <p>Oportunities</p>
-                    </div>
+                    <Link to="/contacts">
+                        <div>
+                            <i className="fa-regular fa-address-book  fa-2xl"></i>
+                            <p>Contacts</p>
+                        </div>
+                    </Link>
                 </li>
                 <li>
-                    <div>
-                        <i class="fa-solid fa-briefcase fa-2xl"></i>
-                        <p>Customers</p>
-                    </div>
+                    <Link to="/oportunities">
+                        <div>
+                            <i className="fa-regular fa-lightbulb fa-2xl"></i>
+                            <p>Oportunities</p>
+                        </div>
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/customers">
+                        <div>
+                            <i className="fa-solid fa-briefcase fa-2xl"></i>
+                            <p>Customers</p>
+                        </div>
+                    </Link>
                 </li>
             </ul>
         </aside>

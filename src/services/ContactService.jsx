@@ -11,3 +11,7 @@ export const saveContact = (contact) => {
 export const getAllContacts = () => {
     return axios.get(`${baseUrl}/contact`)
 }
+
+export const getAllCustomers = () => {
+    return axios.get(`${baseUrl}/client`)
+}

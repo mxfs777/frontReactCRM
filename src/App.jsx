@@ -8,7 +8,7 @@ import SignIn from './pages/SignIn/SignIn';
 import Companies from './pages/Companies/Companies';
 import Oportunities from './pages/Oportunities';
 import Contacts from './pages/Contact/Contacts';
-import Customers from './pages/Customers';
+import Customers from './pages/Customers/Customers';
 import authContext from './context/AuthContext';
 
 const App = () => {

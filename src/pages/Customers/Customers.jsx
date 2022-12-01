@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
-import './Contact.scss';
-import ModalPattern from '../../components/ModalPattern/ModalPattern';
 import * as ContactService from '../../services/ContactService';
 
-const Contacts = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [contactColl, setContactColl] = useState([]);
+const Customers = () => {
+    const [customerColl, setCustomerColl] = useState([]);
 
     useEffect(() => {
-        ContactService.getAllContacts().then(({ data }) => {
+        ContactService.getAllCustomers().then(({ data }) => {
             
             data = data.map( ({date,...props}) => {
                 date = date.split("T")[0].toString();              
@@ -17,39 +14,39 @@ const Contacts = () => {
             }).reverse();
 
 
-            setContactColl(data);
+            setCustomerColl(data);
         });
 
-    }, [contactColl]);
+    }, [customerColl]);
 
-    return (
+    return ( 
         <section className="content">
             <div className='itemsContainer'>
                 <ul>
-                    {contactColl.map( contact => {
+                    {customerColl.map( customer => {
                         return (
-                            <li key={contact?.id}>
+                            <li key={customer?.id}>
                                 <button className="success">
 
                                 </button>
                                 <div className="info">
                                     <table>
                                         <tr>
-                                            <td className='rejected' colspan="4">{contact?.result}</td>
+                                            <td className='rejected' colspan="4">{customer?.result}</td>
                                         </tr>
                                         <tr>
                                             <th>Company</th>
-                                            <td colspan="3">{contact?.company?.name}</td>
+                                            <td colspan="3">{customer?.company?.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Oportunity</th>
-                                            <td colspan="3">{contact?.oportunity?.name}</td>
+                                            <td colspan="3">{customer?.oportunity?.name}</td>
                                         </tr>
                                         <tr>
                                             <th>Type</th>
-                                            <td>{contact?.type}</td>
+                                            <td>{customer?.type}</td>
                                             <th>Date</th>
-                                            <td>{contact?.date}</td>
+                                            <td>{customer?.date}</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -61,12 +58,8 @@ const Contacts = () => {
                     })}
                 </ul>
             </div>
-            <button className='newContactButton' onClick={() => setIsOpen(true)}>NEW CONTACT</button>
-            {isOpen && <ModalPattern setIsOpen={setIsOpen} />}
-
-
         </section>
-    );
+     );
 }
-
-export default Contacts;
+ 
+export default Customers;

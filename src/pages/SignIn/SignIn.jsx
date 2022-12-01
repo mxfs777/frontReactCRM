@@ -24,13 +24,10 @@ const SignIn = () => {
                     preveState.data = {
                         id: data.id
                     };
-
-                    console.log(preveState);
             
                     return {...preveState};
                 });  
             })
-            .catch( (err) => console.log(err))
         }
 
     }

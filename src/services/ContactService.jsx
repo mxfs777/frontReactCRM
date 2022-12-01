@@ -7,3 +7,7 @@ const baseUrl = springBootUrl;
 export const saveContact = (contact) => {
     return axios.post(`${baseUrl}/contact`,contact)
 }
+
+export const getAllContacts = () => {
+    return axios.get(`${baseUrl}/contact`)
+}

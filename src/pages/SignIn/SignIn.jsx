@@ -2,7 +2,7 @@ import { useState, createContext, useContext } from 'react';
 import authContext from '../../context/AuthContext';
 import * as UserService from '../../services/UserService';
 
-import './SignIn.css';
+import styles from  './SignIn.module.scss';
 
 const SignIn = () => {
     const { setAuthData } = useContext(authContext);
@@ -36,13 +36,13 @@ const SignIn = () => {
     }
 
     return ( 
-        <div className='signInContainer' onSubmit={login}>
+        <div className={styles.signInContainer} onSubmit={login}>
             <h3>Sign In</h3>
             <form action="">
-                <div className='form-field'>
+                <div className={styles.formField}>
                     <input type="text" placeholder='Username' value={"admin@crm.com"} name="username" />
                 </div>
-                <div className='form-field'>
+                <div className={styles.formField}>
                     <input type="password" placeholder='Password' value={"Bootcamp4"} name="password" />
                 </div>
                 <button type="submit">Enter</button>

@@ -14,10 +14,10 @@ const Aside = () => {
             </div>
             <ul className="menuItemsContainer">
                 <li>
-                    <Link to="/profile">
+                    <Link to="/customers">
                         <div>
-                            <i className="fa-regular fa-user fa-2xl"></i>
-                            <p>Profile</p>
+                            <i className="fa-solid fa-briefcase fa-2xl"></i>
+                            <p>Customers</p>
                         </div>
                     </Link>
                 </li>
@@ -38,10 +38,10 @@ const Aside = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/customers">
+                    <Link to="/Companies">
                         <div>
-                            <i className="fa-solid fa-briefcase fa-2xl"></i>
-                            <p>Customers</p>
+                            <i className="fa-regular fa-user fa-2xl"></i>
+                            <p>Companies</p>
                         </div>
                     </Link>
                 </li>

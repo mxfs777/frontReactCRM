@@ -5,7 +5,7 @@ import './App.scss';
 import Aside from './components/Aside/Aside';
 
 import SignIn from './pages/SignIn/SignIn';
-import Profile from './pages/Profile';
+import Companies from './pages/Companies/Companies';
 import Oportunities from './pages/Oportunities';
 import Contacts from './pages/Contact/Contacts';
 import Customers from './pages/Customers';
@@ -32,8 +32,8 @@ const App = () => {
                   <main className='main'>
                     <Routes>
                       <Route
-                        path="/profile"
-                        element={<Profile />}
+                        path="/companies"
+                        element={<Companies />}
                       />
                       <Route
                         path="/contacts"

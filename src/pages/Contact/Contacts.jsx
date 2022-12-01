@@ -1,6 +1,10 @@
+import React, { useState } from "react";
 import './Contact.scss';
+import ModalPattern from '../../components/ModalPattern/ModalPattern';
 
 const Contacts = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <>
             <section className="content">
@@ -37,7 +41,10 @@ const Contacts = () => {
                         </li>
                     </ul>
                 </div>
-                <button className='newContactButton'>NEW CONTACT</button>
+                <button className='newContactButton' onClick={() => setIsOpen(true)}>NEW CONTACT</button>
+                {isOpen && <ModalPattern setIsOpen={setIsOpen} />}
+                    
+
             </section>
         </>
     );

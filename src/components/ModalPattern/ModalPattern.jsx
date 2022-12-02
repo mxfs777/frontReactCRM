@@ -70,7 +70,7 @@ const ModalPattern = ({ setIsOpen }) => {
                   <div className={styles.formField}>
                       <label>Result</label>
                       <select name="result">
-                        <option value="Succesfull">Succesfull</option>
+                        <option value="Accepted">Accepted</option>
                         <option value="Pending">Pending</option>
                         <option value="Rejected">Rejected</option>
                       </select>

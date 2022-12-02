@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
+import * as OportunityService from '../../services/OportunityService';
 import Header from "../../components/Header/Header";
-import * as CompanyService from '../../services/CompanyService';
 
-import './Companies.scss';
-
-const Companies = () => {
-    const [ companyColl, setCompanyColl ] = useState([]);
+const Oportunities = () => {
+    const [ oportunityColl, setOportunityColl ] = useState([]);
 
     useEffect(() => {
-        CompanyService.getAllCompanies().then(({ data }) => {
-            setCompanyColl(data);
+        OportunityService.getAllOportunities().then(({ data }) => {
+            setOportunityColl(data);
         });
 
     }, []);
@@ -20,7 +18,7 @@ const Companies = () => {
             <section className="content">
                 <div className=''>
                     <ul>
-                        {companyColl.map( ({id,name}) => <li key={id}>{name}</li>)}
+                        {oportunityColl.map( ({id,name}) => <li key={id}>{name}</li>)}
                     </ul>
                 </div>
             </section>
@@ -28,4 +26,4 @@ const Companies = () => {
     );
 }
  
-export default Companies;
+export default Oportunities;

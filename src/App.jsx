@@ -1,12 +1,12 @@
-import { useState, createContext, useContext } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState, createContext, useContext, useEffect } from 'react';
+import { BrowserRouter, Route, Routes, useParams,useLocation } from 'react-router-dom';
 
 import './App.scss';
 import Aside from './components/Aside/Aside';
 
 import SignIn from './pages/SignIn/SignIn';
 import Companies from './pages/Companies/Companies';
-import Oportunities from './pages/Oportunities';
+import Oportunities from './pages/Oportunities/Oportunities';
 import Contacts from './pages/Contact/Contacts';
 import Customers from './pages/Customers/Customers';
 import authContext from './context/AuthContext';
@@ -22,13 +22,7 @@ const App = () => {
             (authData.authenticated) ?
               (
                 <>
-                  <Aside />
-                  <header className="header">
-                    <div>
-                      <h2>Page</h2>
-                    </div>
-                  </header>
-
+                  <Aside />                  
                   <main className='main'>
                     <Routes>
                       <Route

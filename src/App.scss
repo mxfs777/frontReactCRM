@@ -32,3 +32,26 @@ body {
     box-sizing: border-box;
   }
 }
+
+.contentCont{  
+  box-sizing: border-box;
+  height: 87%;
+  padding: 1em;
+}
+
+.table {
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  td, th {
+    text-align: left;
+    padding: 1em;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}

@@ -17,12 +17,21 @@ const Companies = () => {
     return (
         <>
             <Header />
-            <section className="content">
-                <div className=''>
-                    <ul>
-                        {companyColl.map( ({id,name}) => <li key={id}>{name}</li>)}
-                    </ul>
-                </div>
+            <section className="contentCont">
+                <table className="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                    {companyColl.map( ({id,name,tel,email}) => {return (                        
+                        <tr key={id}>
+                            <td>{name}</td>
+                            <td>{tel}</td>
+                            <td>{email}</td>
+                        </tr>
+                    )})}
+                </table>
             </section>
         </>
     );

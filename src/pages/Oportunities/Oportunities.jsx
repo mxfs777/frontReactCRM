@@ -15,12 +15,19 @@ const Oportunities = () => {
     return (
         <>
             <Header />
-            <section className="content">
-                <div className=''>
-                    <ul>
-                        {oportunityColl.map( ({id,name}) => <li key={id}>{name}</li>)}
-                    </ul>
-                </div>
+            <section className="contentCont">
+                <table className="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                    {oportunityColl.map( ({id,name,description}) => {return (                        
+                        <tr key={id}>
+                            <td>{name}</td>
+                            <td>{description}</td>
+                        </tr>
+                    )})}
+                </table>
             </section>
         </>
     );

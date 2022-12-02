@@ -58,9 +58,9 @@ const ModalPattern = ({ setIsOpen }) => {
                   <div className={styles.formField}>
                       <label>Type of Contact</label>
                       <select name="type">
-                        <option value="In person">In person</option>
-                        <option value="Mobile">Mobile</option>
+                        <option value="Call">Call</option>
                         <option value="Email">Email</option>
+                        <option value="Sale Visit">Sale Visit</option>
                       </select>
                   </div>
                   <div className={styles.formField}>

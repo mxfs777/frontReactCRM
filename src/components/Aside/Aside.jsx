@@ -9,7 +9,7 @@ const Aside = () => {
             <div className="avatarContainer">
                 <div>
                     <img src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png" alt="avatar"  />
-                    <h3>Name</h3>
+                    <h3 className="userName">Name</h3>
                 </div>
             </div>
             <ul className="menuItemsContainer">

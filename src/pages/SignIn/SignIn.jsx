@@ -37,10 +37,10 @@ const SignIn = () => {
             <h3>Sign In</h3>
             <form action="">
                 <div className={styles.formField}>
-                    <input type="text" placeholder='Username' value={"admin@crm.com"} name="username" />
+                    <input className='username' type="text" placeholder='Username' name="username" />
                 </div>
                 <div className={styles.formField}>
-                    <input type="password" placeholder='Password' value={"Bootcamp4"} name="password" />
+                    <input className='password' type="password" placeholder='Password' name="password" />
                 </div>
                 <button type="submit">Enter</button>
             </form>
